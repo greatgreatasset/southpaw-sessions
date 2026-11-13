@@ -1,7 +1,12 @@
 {
  "addons": {
   "southpaw-sessions@kirk.local": {
-   "updates": []
+   "updates": [
+    {
+     "version": "0.1.0",
+     "update_link": "https://github.com/greatgreatasset/southpaw-sessions/releases/download/v0.1.0/southpaw-sessions-0.1.0.xpi"
+    }
+   ]
   }
  }
 }
