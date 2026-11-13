@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Southpaw Sessions</title>
+  <link rel="stylesheet" href="../ui/base.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <img src="../icons/icon.svg" alt="" width="20" height="20">
+    <h1>Southpaw Sessions</h1>
+    <button id="manage" class="btn small subtle" type="button" title="Open the full manager: every session and every link"></button>
+  </header>
+
+  <section class="save">
+    <form id="save-form">
+      <input id="name" class="input" type="text" placeholder="Name this session…" autocomplete="off" autofocus>
+      <button id="save" class="btn primary" type="submit">Save</button>
+    </form>
+    <div id="scope" class="scope" role="radiogroup" aria-label="What to save"></div>
+    <label class="check"><input id="close-after" type="checkbox"> Close the saved tabs afterwards</label>
+    <div id="notice" class="notice" hidden></div>
+  </section>
+
+  <section id="recover" class="recover" hidden></section>
+
+  <section class="list">
+    <div class="filter">
+      <input id="filter" class="input" type="search" placeholder="Filter sessions…" autocomplete="off">
+    </div>
+    <ul id="sessions"></ul>
+    <div id="empty" class="empty" hidden></div>
+  </section>
+
+  <footer id="footer" class="foot"></footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

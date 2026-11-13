@@ -1,0 +1,8 @@
+node_modules/
+dist/
+web-ext-artifacts/
+screenshots/
+# Personal data produced by migration tools / tests - never commit.
+migration/
+*.log
+.DS_Store

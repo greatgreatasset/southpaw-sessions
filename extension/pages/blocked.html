@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saved address</title>
+  <link rel="icon" href="../icons/icon.svg">
+  <link rel="stylesheet" href="../ui/base.css">
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+  <main>
+    <img src="../icons/icon.svg" alt="" width="40" height="40">
+    <h1 id="title">Saved address</h1>
+    <p>This tab was saved with an address that Firefox does not let extensions open directly. Copy it and paste it into the address bar.</p>
+    <div class="copy">
+      <input id="url" class="input" type="text" readonly spellcheck="false" aria-label="Saved address">
+      <button id="copy" class="btn primary" type="button">Copy</button>
+    </div>
+    <p class="muted">Saving your tabs again keeps the original address — not this page.</p>
+  </main>
+  <script type="module" src="blocked.js"></script>
+</body>
+</html>

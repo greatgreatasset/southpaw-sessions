@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Southpaw Sessions</title>
+  <link rel="icon" href="../icons/icon.svg">
+  <link rel="stylesheet" href="../ui/base.css">
+  <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="side">
+      <div class="brand">
+        <img src="../icons/icon.svg" alt="" width="30" height="30">
+        <div>
+          <h1>Southpaw Sessions</h1>
+          <div id="stats" class="stats"></div>
+        </div>
+      </div>
+      <div class="side-actions">
+        <button id="btn-save" class="btn primary" type="button"></button>
+        <button id="btn-import" class="icon-btn boxed" type="button" title="Import sessions or restore a backup" aria-label="Import"></button>
+        <button id="btn-settings" class="icon-btn boxed" type="button" title="Settings and backups" aria-label="Settings"></button>
+      </div>
+      <button id="nav-all" class="nav" type="button"></button>
+      <div class="side-filter">
+        <input id="side-q" class="input" type="search" placeholder="Find a session…" autocomplete="off">
+        <select id="side-sort" class="select" title="Sort sessions" aria-label="Sort sessions">
+          <option value="date-desc">Newest</option>
+          <option value="date-asc">Oldest</option>
+          <option value="name">Name</option>
+          <option value="size">Largest</option>
+        </select>
+      </div>
+      <nav id="side-list" aria-label="Sessions"></nav>
+    </aside>
+
+    <main id="main">
+      <div id="banner" class="banner" hidden></div>
+      <header id="head" class="head"></header>
+      <div id="toolbar" class="toolbar"></div>
+      <div id="bar" class="bar"></div>
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+  <script type="module" src="manager.js"></script>
+</body>
+</html>

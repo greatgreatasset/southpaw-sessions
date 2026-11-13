@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Southpaw Sessions",
+  "short_name": "Southpaw",
+  "version": "0.1.0",
+  "description": "Save all your tabs as a named session and reopen them later. Browse, search, prune and dead-link-check every link across all your sessions. Autosave, crash recovery and bounded file backups built in.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "southpaw-sessions@kirk.local",
+      "strict_min_version": "142.0",
+      "update_url": "https://raw.githubusercontent.com/greatgreatasset/southpaw-sessions/master/updates.json",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "action": {
+    "default_title": "Southpaw Sessions",
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "pages/manager.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage",
+    "unlimitedStorage",
+    "alarms",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://i.imgur.com/*",
+    "https://imgur.com/*"
+  ],
+  "optional_host_permissions": ["<all_urls>"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Open Southpaw Sessions"
+    },
+    "quick-save": {
+      "suggested_key": { "default": "Alt+Shift+Q" },
+      "description": "Save all windows as a new session"
+    }
+  }
+}

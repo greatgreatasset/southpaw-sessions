@@ -1,0 +1,28 @@
+{
+  "name": "southpaw-sessions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Firefox session manager with a built-in link library: save, restore, prune, and dead-link-check every tab you have ever saved.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test --test-timeout=30000 tests/*.test.mjs",
+    "check": "tsc -p .",
+    "lint": "web-ext lint -s extension --self-hosted",
+    "start": "web-ext run -s extension",
+    "build": "web-ext build -s extension -a dist --overwrite-dest",
+    "sign": "web-ext sign -s extension -a dist --channel unlisted",
+    "release": "node tools/release.mjs",
+    "e2e": "node tests/e2e/run.mjs",
+    "migrate:analyzer": "node tools/export-analyzer-state.mjs"
+  },
+  "devDependencies": {
+    "@types/firefox-webext-browser": "^143.0.1",
+    "fake-indexeddb": "^6.2.8",
+    "selenium-webdriver": "^4.51.0",
+    "typescript": "^7.0.2",
+    "web-ext": "^10.8.0"
+  }
+}
